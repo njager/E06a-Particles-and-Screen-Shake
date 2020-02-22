@@ -12,5 +12,11 @@ func _ready():
 
 func _physics_process(delta):
 	if Input.is_action_pressed("Left"):
-		get_node("/root/World/Camera")._apply_shake()
+		get_node("/root/World/Camera").add_trauma(10)
+	if Input.is_action_pressed("Right"):
+		get_node("/root/World/Camera").add_trauma(20)
+	if Input.is_action_pressed("Up"):
+		get_node("/root/World/Camera").add_trauma(30)
+	if Input.is_action_pressed("Down"):
+		get_node("/root/World/Camera").add_trauma(40)
 	
